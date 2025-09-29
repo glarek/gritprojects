@@ -1,4 +1,5 @@
 <script>
+	export const trailingSlash = 'always';
 	import { beforeNavigate, onNavigate, afterNavigate, invalidate } from '$app/navigation';
 	import { page } from '$app/state';
 
