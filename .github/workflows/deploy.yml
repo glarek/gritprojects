@@ -3,7 +3,7 @@ on: push
 
 jobs:
   deploy-to-dev:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/develop'
     name: Deploy develop branch
     runs-on: ubuntu-latest
     steps:
