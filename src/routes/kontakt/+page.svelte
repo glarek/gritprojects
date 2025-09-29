@@ -19,7 +19,7 @@
 			<h2 class="font-semibold">Låt oss hjälpa er redan idag.</h2>
 
 			<p class="mt-5 mb-5">
-				Sluta köpa ritningar och börja investera lösningar som <mark>fungerar</mark> i praktiken.
+				Hejhej
 				<br />
 			</p>
 		</div>
