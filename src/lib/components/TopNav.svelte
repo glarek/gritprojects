@@ -32,27 +32,27 @@
 			</a>
 		</div>
 
-		<ul class="flex flex-row gap-x-5 items-center font-semibold">
+		<ul class="flex flex-row gap-x-3 items-center font-semibold">
 			<a
 				href="/om"
-				class="popclick underline underline-offset-4 decoration-2 decoration-white/0 hover:decoration-white transition-all duration-10"
+				class="popclick underline underline-offset-4 decoration-2 decoration-white/0 hover:bg-white/25 rounded p-1 transition-all duration-10"
 				>Om oss</a
 			>
 			<a
 				href="/kontakt"
-				class="popclick underline underline-offset-4 decoration-2 decoration-white/0 hover:decoration-white transition-all duration-10"
+				class="popclick underline underline-offset-4 decoration-2 decoration-white/0 hover:bg-white/25 p-1 rounded transition-all duration-10"
 				>Kontakt</a
 			>
 
 			<button
-				class="items-center justify-center w-7 h-7 relative group cursor-pointer popclick"
+				class="items-center justify-center w-7 h-7 relative group cursor-pointer popclick hover:bg-white/25 rounded"
 				onclick={toggleMode}
 			>
 				<Moon
-					class="transition-all group-hover:text-green-500 absolute opacity-100 visible dark:invisible dark:opacity-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+					class=" absolute opacity-100 visible dark:invisible dark:opacity-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 				/>
 				<Sun
-					class="transition-all group-hover:text-yellow-400 absolute opacity-0 invisible dark:visible dark:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+					class=" absolute opacity-0 invisible dark:visible dark:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 				/>
 			</button>
 			<button

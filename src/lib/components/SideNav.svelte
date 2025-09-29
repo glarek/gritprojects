@@ -18,7 +18,7 @@
 	{...restProps}
 >
 	<ul class="flex flex-col">
-		<p class="  text-2xl ml-4 my-3 dark:text-purple-300 text-purple-800">Våra tjänster</p>
+		<p class="  text-2xl ml-4 my-3 text-primary">Våra tjänster</p>
 
 		{#each navLinks as navLink}
 			<NavigationMenuLink
