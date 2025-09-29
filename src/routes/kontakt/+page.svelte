@@ -14,9 +14,9 @@
 	<div class="grid md:grid-cols-[3fr_140px] gap-10 w-full justify-center items-center">
 		<div class="md:order-1 order-2">
 			<h1 class="text-4xl text-left">
-				Vi ser målet<br />
+				Kontakta oss<br />
 			</h1>
-			<h2 class="font-semibold">Vi projekterar systemet som levererar resultatet.</h2>
+			<h2 class="font-semibold">Låt oss hjälpa er redan idag.</h2>
 
 			<p class="mt-5 mb-5">
 				Sluta köpa ritningar och börja investera lösningar som <mark>fungerar</mark> i praktiken.
