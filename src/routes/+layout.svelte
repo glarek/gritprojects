@@ -3,6 +3,7 @@
 	import { page } from '$app/state';
 
 	import '../app.css';
+	import { ModeWatcher } from 'mode-watcher';
 	import TopNav from '$lib/components/TopNav.svelte';
 	import SideNav from '$lib/components/SideNav.svelte';
 	import { Toaster } from '$lib/components/ui/sonner/index.js';
@@ -41,6 +42,8 @@
 
 <Toaster richColors position="top-left" />
 
+<ModeWatcher disableTransitions={true} />
+
 <header class="z-50 sticky top-0">
 	<TopNav mainClass="h-[4rem]" navClass="lg:w-5xl w-full" />
 </header>
@@ -53,10 +56,11 @@
 
 <div id="main-container" class="flex flex-row justify-center items-start">
 	<SideNav
-		class="h-[calc(100dvh-4rem)] bg-background fixed lg:sticky lg:top-[4rem] lg:flex flex-col left-0 w-60 transition-all duration-300 ease-in-out overflow-y-auto  {getShowNavbar()
+		class="bg-background h-[calc(100dvh-4rem)] fixed lg:sticky lg:top-[4rem] lg:flex flex-col left-0 w-60 transition-transform duration-300 ease-in-out overflow-y-auto  {getShowNavbar()
 			? 'translate-x-0'
 			: '-translate-x-full'} lg:translate-x-0 z-40"
 	/>
+
 	<button
 		type="button"
 		id="overlay"

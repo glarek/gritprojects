@@ -22,7 +22,7 @@
 	--card-foreground: oklch(0.141 0.005 285.823);
 	--popover: oklch(1 0 0);
 	--popover-foreground: oklch(0.141 0.005 285.823);
-	--primary: #d50cf0;
+	--primary: hsl(271, 100%, 69%);
 	--second-primary: #f564a9;
 	--primary-foreground: oklch(100% 0.00011 271.152);
 	--secondary: oklch(0.967 0.001 286.375);
@@ -50,8 +50,7 @@
 	--sidebar-accent-foreground: oklch(0.21 0.006 285.885);
 	--sidebar-border: oklch(0.92 0.004 286.32);
 	--sidebar-ring: oklch(0.623 0.214 259.815);
-	--mark: oklch(79.731% 0.15679 319.239);
-	scrollbar-gutter: stable;
+	--mark: oklch(90.452% 0.06201 319.209);
 }
 
 .dark {
@@ -61,6 +60,7 @@
 	--card-foreground: oklch(0.985 0 0);
 	--popover: oklch(0.21 0.006 285.885);
 	--popover-foreground: oklch(0.985 0 0);
+	--primary: hsl(263, 100%, 73%);
 	--primary-foreground: oklch(0.985 0 0);
 	--secondary: oklch(0.274 0.006 286.033);
 	--secondary-foreground: oklch(0.985 0 0);
@@ -85,7 +85,7 @@
 	--sidebar-accent-foreground: oklch(0.985 0 0);
 	--sidebar-border: oklch(1 0 0 / 10%);
 	--sidebar-ring: oklch(0.488 0.243 264.376);
-	--mark: oklch(66.991% 0.15362 240.062);
+	--mark: oklch(37.595% 0.09839 317.342);
 }
 
 :root:has(.no-doc-scroll) {
@@ -135,7 +135,7 @@
 
 @layer base {
 	* {
-		@apply border-border outline-ring/50 tracking-tight;
+		@apply transition-none border-border outline-ring/50 tracking-tight;
 	}
 
 	body {

@@ -7,7 +7,7 @@ export const navLinks = [
 		icon: Unplug,
 		children: [
 			{
-				title: 'El-projektering',
+				title: 'Projektering',
 				href: '/el/projektering'
 			},
 			{
