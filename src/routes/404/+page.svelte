@@ -7,8 +7,10 @@
 </svelte:head>
 
 <div class="flex flex-col items-center h-screen mt-20 gap-4">
-	<h1 class="text-7xl text-primary">404</h1>
-	<h3>Sidan hittades inte</h3>
+	<h1 class="text-7xl text-primary underline underline-offset-8 decoration-wavy decoration-4">
+		404
+	</h1>
+	<h3>Sidan hittades inte!</h3>
 	<p>Hoppsan! Sidan du letade efter verkar inte finnas.</p>
-	<Button>Tillbaka till startsidan</Button>
+	<Button href="/">Tillbaka till startsidan</Button>
 </div>

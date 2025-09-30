@@ -1,7 +1,6 @@
 <script>
-	import { ModeWatcher, toggleMode } from 'mode-watcher';
-	import MenuIcon from '$lib/icons/menu-icon.svelte';
-	import { Moon, Sun, Menu, KeyRound, CircleUserRound } from '@lucide/svelte';
+	import { toggleMode } from 'mode-watcher';
+	import { Moon, Sun, Menu, X, CircleUserRound } from '@lucide/svelte';
 	import Logo from '$lib/icons/logo.svelte';
 
 	import { getShowNavbar, toggleNavbar } from '$lib/utils/navBarState.svelte.js';
@@ -15,11 +14,11 @@
 		...restProps
 	} = $props();
 
+	let hover = $state(false);
+
 	let navigating = getContext('navigating');
 	let projectsShow = $state(false);
 </script>
-
-<ModeWatcher />
 
 <div
 	{...restProps}
@@ -27,39 +26,53 @@
 >
 	<nav class="flex items-center pl-4 pr-4 py-4 justify-between {navClasses}">
 		<div class="flex flex-row items-center gap-x-5 font-semibold">
-			<a href="/" class="popclick">
-				<Logo height={32} href="/" class="self-center" {projectsShow} />
+			<a
+				href="/"
+				class="popclick hover:scale-120 ease-in-out"
+				onmouseenter={() => (hover = true)}
+				onmouseleave={() => (hover = false)}
+			>
+				<Logo {hover} height={32} href="/" class="self-center" {projectsShow} />
 			</a>
 		</div>
 
-		<ul class="flex flex-row gap-x-3 items-center font-semibold">
+		<ul class="flex flex-row gap-x-1 items-center font-semibold">
 			<a
 				href="/om"
-				class="popclick underline underline-offset-4 decoration-2 decoration-white/0 hover:bg-white/25 rounded p-1 transition-all duration-10"
+				class="popclick underline underline-offset-4 decoration-2 decoration-white/0 hover:bg-white/25 rounded-full p-2 transition-all duration-10"
 				>Om oss</a
 			>
 			<a
 				href="/kontakt"
-				class="popclick underline underline-offset-4 decoration-2 decoration-white/0 hover:bg-white/25 p-1 rounded transition-all duration-10"
+				class="popclick underline underline-offset-4 decoration-2 decoration-white/0 hover:bg-white/25 p-2 rounded-full transition-all duration-10"
 				>Kontakt</a
 			>
 
 			<button
-				class="items-center justify-center w-7 h-7 relative group cursor-pointer popclick hover:bg-white/25 rounded"
+				class="items-center justify-center w-7 h-7 p-5 relative group cursor-pointer popclick hover:bg-white/25 rounded-full"
 				onclick={toggleMode}
 			>
 				<Moon
-					class=" absolute opacity-100 visible dark:invisible dark:opacity-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+					class=" transition-all  absolute opacity-100  dark:opacity-0 rotate-0 dark:rotate-90 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 				/>
 				<Sun
-					class=" absolute opacity-0 invisible dark:visible dark:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+					class=" transition-all  absolute opacity-0  dark:opacity-100 rotate-90 dark:rotate-0  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 				/>
 			</button>
 			<button
-				class="items-center justify-center w-7 h-7 relative lg:hidden group cursor-pointer hover:text-slate-200 transition-none"
+				class="lg:hidden items-center justify-center w-7 h-7 p-5 relative group cursor-pointer popclick hover:bg-white/25 rounded-full"
 				onclick={toggleNavbar}
 			>
-				<MenuIcon menuOpen={getShowNavbar()} />
+				<X
+					class=" transition-all {getShowNavbar()
+						? 'rotate-0 opacity-100'
+						: 'rotate-90 opacity-0'}  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+				/>
+				<Menu
+					class=" transition-all {getShowNavbar()
+						? 'rotate-90 opacity-0'
+						: 'rotate-0 opacity-100'}  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+				/>
 			</button>
 		</ul>
 	</nav>
