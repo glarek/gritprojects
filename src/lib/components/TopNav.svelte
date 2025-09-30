@@ -39,12 +39,12 @@
 		<ul class="flex flex-row gap-x-1 items-center font-semibold">
 			<a
 				href="/om"
-				class="popclick underline underline-offset-4 decoration-2 decoration-white/0 hover:bg-white/25 rounded-full p-2 transition-all duration-10"
+				class="popclick underline underline-offset-4 decoration-2 decoration-white/0 hover:bg-white/25 rounded-full p-2 transition-all duration-75"
 				>Om oss</a
 			>
 			<a
 				href="/kontakt"
-				class="popclick underline underline-offset-4 decoration-2 decoration-white/0 hover:bg-white/25 p-2 rounded-full transition-all duration-10"
+				class="popclick underline underline-offset-4 decoration-2 decoration-white/0 hover:bg-white/25 p-2 rounded-full transition-all duration-75"
 				>Kontakt</a
 			>
 
