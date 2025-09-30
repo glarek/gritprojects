@@ -1,21 +1,21 @@
 <script>
 	let { hover = false, logoShow = true, gritShow = true, projectsShow = true, ...rest } = $props();
-	import { slide } from 'svelte/transition';
+	import { scale } from 'svelte/transition';
 </script>
 
-<div class="flex">
+<div class="flex relative">
 	{#if logoShow}
 		<div class="">
 			<svg
 				{...rest}
 				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 2617 863"
+				viewBox="0 0 863 863"
 				version="1.1"
 				style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"
 				stroke="currentColor"
 				fill="currentColor"
 			>
-				<g id="LOGO" transform="matrix(0.98815,0,0,0.98815,-1241.61,-726.779)" transition:slide>
+				<g id="LOGO" transform="matrix(0.98815,0,0,0.98815,-1241.61,-726.779)">
 					<path
 						d="M2057,816.411L2057,1455.59C2057,1499.97 2020.97,1536 1976.59,1536L1337.41,1536C1293.03,1536 1257,1499.97 1257,1455.59L1257,816.411C1257,772.031 1293.03,736 1337.41,736L1976.59,736C2020.97,736 2057,772.031 2057,816.411ZM1424.67,1219.68C1406.14,1230.84 1375.38,1252.16 1358.25,1268.29C1350.86,1275.26 1350.51,1278.75 1352.01,1284.2C1365.84,1334.63 1447.46,1423.03 1650.21,1416.18C1659.79,1415.86 1660.65,1411.43 1654.84,1409.22C1635.32,1401.81 1587.49,1386.24 1528.9,1332.35C1499.59,1305.38 1469.77,1264.41 1449.77,1225.48C1444.8,1214.85 1438.29,1211.49 1424.67,1219.68ZM1581.85,1014.7C1530.07,1027.14 1484.21,1045.05 1441.93,1063.07C1438.21,1064.13 1432.28,1070.45 1433.81,1078.31C1450.49,1163.49 1531.83,1403.7 1842.75,1422.41C1849.9,1422.74 1857.12,1421.43 1851.49,1417.92C1809.56,1385.7 1661.45,1357.57 1600.47,1031.8C1597.27,1014.7 1595.12,1011.51 1581.85,1014.7ZM1960.23,1419.67L1960.2,1417.89C1959.78,1417.15 1958.94,1416.2 1957.54,1415C1824.45,1306.51 1839.19,1101.57 1876.98,890.925C1881.91,863.443 1874.24,853.971 1851.49,853.985C1808.2,854.011 1695.95,870.376 1654.84,881.592C1638.14,886.147 1635.31,895.134 1635.32,917.894C1635.38,1339.7 1883.59,1406.27 1954.06,1420.01C1955.66,1420.32 1959.17,1420.72 1960.23,1419.67Z"
 					/>
@@ -25,11 +25,11 @@
 	{/if}
 
 	{#if gritShow}
-		<div class="absolute md:flex hidden">
+		<div class="md:flex hidden">
 			<svg
 				{...rest}
 				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 2617 863"
+				viewBox="863 0 2617 863"
 				version="1.1"
 				style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"
 				stroke="currentColor"
@@ -45,7 +45,7 @@
 	{/if}
 
 	{#if hover}
-		<div class="absolute md:flex hidden" transition:slide>
+		<div class="md:flex hidden absolute" transition:scale>
 			<svg
 				{...rest}
 				xmlns="http://www.w3.org/2000/svg"

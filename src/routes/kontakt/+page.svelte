@@ -18,7 +18,7 @@
 		</h1>
 		<h2 class="font-semibold">Låt oss hjälpa er redan idag</h2>
 
-		<div class="grid col-span-full grid-cols-1 gap-6 mt-6 md:w-fit min-w-full">
+		<div class="grid col-span-full lg:grid-cols-2 grid-cols-1 gap-6 mt-6 md:w-fit min-w-full">
 			<Card.Root
 				class="group outline-2 outline-border/0 hover:outline-border transition-all duration-75"
 			>
