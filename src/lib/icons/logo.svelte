@@ -25,7 +25,7 @@
 	{/if}
 
 	{#if gritShow}
-		<div class="absolute">
+		<div class="absolute md:flex hidden">
 			<svg
 				{...rest}
 				xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@
 	{/if}
 
 	{#if hover}
-		<div class="absolute" transition:slide>
+		<div class="absolute md:flex hidden" transition:slide>
 			<svg
 				{...rest}
 				xmlns="http://www.w3.org/2000/svg"
