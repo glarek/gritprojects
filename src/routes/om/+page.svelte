@@ -16,7 +16,7 @@
 			<h1 class="text-4xl text-left">
 				GRIT Projects AB<br />
 			</h1>
-			<h2 class="font-semibold">Vi projekterar systemet som levererar resultatet.</h2>
+			<h2 class="font-semibold">Vi brinner för det vi gör</h2>
 
 			<p class="mt-5 mb-5">
 				På GRIT Projects är vi specialiserade på fastighetens mest vitala system: el, tele, VVS och
