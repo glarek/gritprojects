@@ -105,7 +105,7 @@
 				>
 			</Card.Header>
 			<Card.Footer>
-				<Button>Läs mer</Button>
+				<Button href="/vvs/projektering">Läs mer</Button>
 			</Card.Footer>
 		</Card.Root>
 		<Card.Root
