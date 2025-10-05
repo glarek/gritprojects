@@ -135,19 +135,19 @@
 
 @layer base {
 	* {
-		@apply transition-none border-border outline-ring/50 tracking-tight;
+		@apply border-border outline-ring/50 tracking-tight transition-none;
 	}
 
 	body {
 		@apply bg-background text-foreground wrap-anywhere;
 	}
 
-	main {
-		@apply p-6;
+	.main {
+		@apply w-full p-6 md:p-20;
 	}
 
 	.popclick {
-		@apply active:scale-115 transition-transform;
+		@apply transition-transform active:scale-115;
 	}
 
 	.main-container {
@@ -166,27 +166,31 @@
 	}
 
 	.error-message {
-		@apply text-destructive text-xs mt-1;
+		@apply text-destructive mt-1 text-xs;
 	}
 
 	h1 {
-		@apply font-(family-name:--font-heading) font-extrabold tracking-tighter text-4xl;
+		@apply font-(family-name:--font-heading) text-4xl font-extrabold tracking-tighter;
 	}
 
 	h2 {
-		@apply font-sans text-2xl -tracking-[0.1rem];
+		@apply font-sans text-2xl font-semibold -tracking-[0.1rem];
 	}
 
 	h3 {
-		@apply font-sans font-semibold text-lg;
+		@apply font-sans text-lg font-semibold;
 	}
 
 	p {
-		@apply font-sans pb-0;
+		@apply pb-0 font-sans;
 	}
 
 	u {
-		@apply font-semibold decoration-primary decoration-2;
+		@apply decoration-primary font-semibold decoration-2;
+	}
+
+	.main ul {
+		@apply my-6 ml-6 list-disc [&>li]:mt-2;
 	}
 
 	hr {
@@ -211,7 +215,7 @@
 	}
 
 	table {
-		@apply text-sm border-collapse overflow-x-scroll;
+		@apply border-collapse overflow-x-scroll text-sm;
 	}
 
 	th,
@@ -220,7 +224,7 @@
 	}
 
 	thead {
-		@apply bg-foreground/3 text-foreground underline  decoration-2 decoration-primary;
+		@apply bg-foreground/3 text-foreground decoration-primary underline decoration-2;
 	}
 
 	thead > tr > th {
@@ -249,11 +253,11 @@
 	}
 
 	.markdown li {
-		@apply list-disc list-outside ml-8 my-1;
+		@apply my-1 ml-8 list-outside list-disc;
 	}
 
 	.email {
-		@apply font-semibold hover:underline underline-offset-2 decoration-primary cursor-pointer;
+		@apply decoration-primary cursor-pointer font-semibold underline-offset-2 hover:underline;
 	}
 }
 

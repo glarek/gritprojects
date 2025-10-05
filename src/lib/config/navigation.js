@@ -11,8 +11,8 @@ export const navLinks = [
 				href: '/el/projektering'
 			},
 			{
-				title: 'Solcellsinstallationer',
-				href: '/el/solcellsinstallationer'
+				title: 'Solceller',
+				href: '/el/solceller'
 			},
 			{
 				title: 'Utredningar',

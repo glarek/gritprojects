@@ -44,28 +44,28 @@
 
 <ModeWatcher disableTransitions={true} />
 
-<header class="z-50 sticky top-0">
+<header class="sticky top-0 z-50">
 	<TopNav mainClass="h-[4rem]" navClass="lg:w-5xl w-full" />
 </header>
 
 <span
 	class="{navigating.isNavigating
 		? 'h-[2px]'
-		: 'h-[0px]'} top-[calc(4rem-1px)] z-99 absolute loader transition-all duration-500"
+		: 'h-[0px]'} loader absolute top-[calc(4rem-1px)] z-99 transition-all duration-500"
 ></span>
 
-<div id="main-container" class="flex flex-row justify-center items-start">
+<div id="main-container" class="flex flex-row items-start justify-center">
 	<SideNav
-		class="bg-background h-[calc(100dvh-4rem)] fixed lg:sticky lg:top-[4rem] lg:flex flex-col left-0 w-60 transition-transform duration-300 ease-in-out overflow-y-auto  {getShowNavbar()
+		class="bg-background fixed left-0 h-[calc(100dvh-4rem)] w-60 flex-col overflow-y-auto transition-transform duration-300 ease-in-out lg:sticky lg:top-[4rem] lg:flex  {getShowNavbar()
 			? 'translate-x-0'
-			: '-translate-x-full'} lg:translate-x-0 z-40"
+			: '-translate-x-full'} z-40 lg:translate-x-0"
 	/>
 
 	<button
 		type="button"
 		id="overlay"
 		aria-label="Close sidebar overlay"
-		class="fixed top-[4rem] left-0 w-full h-full lg:hidden dark:bg-black/30 bg-black/10 z-30 duration-200 transition-all ease-in-out {getShowNavbar()
+		class="fixed top-[4rem] left-0 z-30 h-full w-full bg-black/10 transition-all duration-200 ease-in-out lg:hidden dark:bg-black/30 {getShowNavbar()
 			? 'no-doc-scroll visible opacity-100 backdrop-blur-xs'
 			: 'invisible opacity-0'}"
 		onclick={() => setShowNavbar(false)}
@@ -73,7 +73,7 @@
 	></button>
 	<div
 		id="main-content"
-		class="flex pb-4 lg:w-195 lg:flex-none flex-1 flex-col lg:border-r-1 border-dashed w-full min-h-[calc(100svh-4rem)]"
+		class="flex min-h-[calc(100svh-4rem)] w-full flex-1 flex-col border-dashed pb-4 lg:w-195 lg:flex-none lg:border-r-1"
 	>
 		<div style="view-transition-name: slide">{@render children()}</div>
 	</div>

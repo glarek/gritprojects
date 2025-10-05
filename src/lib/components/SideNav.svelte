@@ -11,11 +11,11 @@
 </script>
 
 <div
-	class="flex flex-col border-l-1 border-r-1 dark:border-white/5 border-dashed border-slate-200 justify-between py-4 font-semibold {additionalClasses} "
+	class="flex flex-col justify-between border-r-1 border-l-1 border-dashed border-slate-200 py-4 font-semibold dark:border-white/5 {additionalClasses} "
 	{...restProps}
 >
 	<ul class="flex flex-col">
-		<p class="  text-2xl ml-4 my-3 text-primary">Våra tjänster</p>
+		<p class="  text-primary my-3 ml-4 text-2xl">Våra tjänster</p>
 
 		{#each navLinks as navLink}
 			<NavigationMenuLink
@@ -27,9 +27,10 @@
 		{/each}
 	</ul>
 
-	<footer class="flex flex-col items-center justify-center w-full text-xs pb-0 pt-2 self-center">
-		<hr class="w-full pb-2 border-dashed border-slate-200 dark:border-white/5" />
+	<footer class="flex w-full flex-col items-center justify-center self-center pt-2 pb-0 text-xs">
+		<hr class="w-full border-dashed border-slate-200 pb-2 dark:border-white/5" />
 		<p>GRIT Projects AB - 2025</p>
+		<p>Stockholm, Sverige</p>
 		<p>559540-1950</p>
 	</footer>
 </div>
