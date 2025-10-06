@@ -10,6 +10,7 @@
 	import { setContext } from 'svelte';
 
 	import { getShowNavbar, toggleNavbar, setShowNavbar } from '$lib/utils/navBarState.svelte.js';
+	import { PUBLIC_GIT_BRANCH } from '$env/static/public';
 
 	let { data, children } = $props();
 
@@ -38,6 +39,10 @@
 
 <svelte:head>
 	<title>GRIT Projects AB - VVS och el</title>
+	{#if PUBLIC_GIT_BRANCH === 'develop'}
+		<meta name="robots" content="noindex, nofollow" />
+		<meta name="environment" content="developer" />
+	{/if}
 </svelte:head>
 
 <Toaster richColors position="top-left" />
